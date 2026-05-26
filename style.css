@@ -1,0 +1,204 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  background:
+  radial-gradient(circle at top,
+  #1c1c1c,
+  #050505);
+
+  color:white;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* SPLASH */
+
+#splash{
+  position:fixed;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:black;
+  z-index:999;
+  animation:fadeOut 1s ease forwards;
+  animation-delay:2.5s;
+}
+
+#splash h1{
+  font-size:42px;
+  letter-spacing:6px;
+  color:#00ffd5;
+
+  text-shadow:
+  0 0 20px #00ffd5;
+}
+
+#splash p{
+  opacity:0.7;
+}
+
+@keyframes fadeOut{
+  to{
+    opacity:0;
+    visibility:hidden;
+  }
+}
+
+/* APP */
+
+.hidden{
+  opacity:0;
+  animation:showApp 1s forwards;
+  animation-delay:2.8s;
+}
+
+@keyframes showApp{
+  to{
+    opacity:1;
+  }
+}
+
+.app{
+  max-width:520px;
+  margin:auto;
+  padding:20px;
+}
+
+.header{
+  text-align:center;
+  margin-top:30px;
+}
+
+.header h1{
+  margin:0;
+  font-size:34px;
+  color:#00ffd5;
+
+  text-shadow:
+  0 0 15px #00ffd5;
+}
+
+.header p{
+  opacity:0.6;
+}
+
+/* CARD */
+
+.card{
+  margin-top:25px;
+
+  background:rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(12px);
+
+  border-radius:20px;
+
+  padding:18px;
+}
+
+/* INPUTS */
+
+input,select{
+  width:100%;
+  padding:14px;
+
+  margin-top:12px;
+
+  border:none;
+  border-radius:14px;
+
+  background:#111;
+  color:white;
+
+  font-size:15px;
+}
+
+input:focus,
+select:focus{
+  outline:none;
+
+  box-shadow:
+  0 0 10px #00ffd5;
+}
+
+/* BUTTON */
+
+button{
+  width:100%;
+  padding:15px;
+
+  margin-top:16px;
+
+  border:none;
+  border-radius:16px;
+
+  background:#00ffd5;
+  color:black;
+
+  font-weight:900;
+  letter-spacing:2px;
+
+  cursor:pointer;
+
+  transition:0.25s;
+}
+
+button:hover{
+  transform:scale(1.02);
+
+  box-shadow:
+  0 0 20px #00ffd5;
+}
+
+/* OUTPUT */
+
+#output{
+  margin-top:22px;
+
+  background:#0f0f0f;
+
+  border-radius:18px;
+
+  padding:18px;
+
+  line-height:1.6;
+
+  white-space:pre-line;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+}
+
+/* PRO */
+
+.pro{
+  margin-top:25px;
+
+  background:
+  linear-gradient(
+  135deg,
+  #151515,
+  #0b0b0b);
+
+  border-radius:20px;
+
+  padding:18px;
+
+  text-align:center;
+
+  border:
+  1px solid rgba(0,255,213,0.15);
+}
+
+.pro h3{
+  color:#00ffd5;
+}
